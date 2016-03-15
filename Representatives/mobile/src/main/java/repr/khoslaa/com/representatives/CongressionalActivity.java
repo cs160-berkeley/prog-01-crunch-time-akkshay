@@ -31,6 +31,8 @@ public class CongressionalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_congressional);
 
+
+
         recList = (RecyclerView) findViewById(R.id.cardList);
         recList.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -85,12 +87,14 @@ public class CongressionalActivity extends AppCompatActivity {
                                 RepInfo currRepInfo = new RepInfo();
                                 String currFirstName = currResult.get("first_name").getAsString();
                                 String currLastName = currResult.get("last_name").getAsString();
-                                currRepInfo.setFullName(currFirstName + currLastName);
+                                currRepInfo.setFullName(currFirstName + " " + currLastName);
                                 currRepInfo.setEmail(currResult.get("oc_email").getAsString());
                                 currRepInfo.setWebsite(currResult.get("website").getAsString());
                                 currRepInfo.setParty(currResult.get("party").getAsString());
                                 currRepInfo.setTweet("Blank tweet for right now");
                                 currRepInfo.setTermEnds(currResult.get("term_end").getAsString());
+                                currRepInfo.setRepId(currResult.get("bioguide_id").getAsString());
+                                currRepInfo.setTwitterId(currResult.get("twitter_id").getAsString());
                                 repInfoList.add(currRepInfo);
                             }
 
@@ -112,7 +116,7 @@ public class CongressionalActivity extends AppCompatActivity {
 
     public void populateRecyclerView(List<RepInfo> repInfoList) {
         Log.d("T", "the repinfo list is currently" + repInfoList.toString());
-        CongressionalViewAdapter ca = new CongressionalViewAdapter(repInfoList);
+        CongressionalViewAdapter ca = new CongressionalViewAdapter(repInfoList, getApplicationContext());
         recList.setAdapter(ca);
     }
 

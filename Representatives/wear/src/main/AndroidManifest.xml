@@ -40,6 +40,10 @@
         <activity android:name=".RepViewActivity" />
         <activity android:name=".VoteViewActivity"></activity>
         <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="74f76ba591dbd1c2cece56dc0229e0137504e4ae" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

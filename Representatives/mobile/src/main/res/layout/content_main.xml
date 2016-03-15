@@ -52,8 +52,7 @@
         android:layout_height="60dp"
         android:text="FIND MY REPS!"
         android:id="@+id/findRepsButton"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="99dp"
+        android:layout_below="@+id/editText"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignLeft="@+id/textView"
@@ -79,34 +78,21 @@
         android:editable="false"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="OR"
-        android:id="@+id/textView2"
-        android:textSize="30sp"
-        android:textColor="#ffffff"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="30sp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:hint="Current Location"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:layout_marginTop="30sp"
-        android:editable="false"
-        />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Find By ZipCode"
+        android:id="@+id/findRepsButtonCurr"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="99dp"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:background="#20d76d"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
 
 </RelativeLayout>

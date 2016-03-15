@@ -11,6 +11,19 @@ public class RepInfo {
     private String party;
     private String termEnds;
 
+    public String getTwitterId() {
+        return twitterId;
+    }
+
+    public void setTwitterId(String twitterId) {
+        this.twitterId = twitterId;
+    }
+
+    private String twitterId;
+
+
+    private String repId;
+
 
 
     public RepInfo() {
@@ -64,6 +77,13 @@ public class RepInfo {
 
     public void setTermEnds(String termEnds) {
         this.termEnds = termEnds;
+    }
+    public String getRepId() {
+        return repId;
+    }
+
+    public void setRepId(String repId) {
+        this.repId = repId;
     }
 
 

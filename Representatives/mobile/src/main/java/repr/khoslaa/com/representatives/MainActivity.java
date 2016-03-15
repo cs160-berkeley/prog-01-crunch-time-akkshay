@@ -12,10 +12,18 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.wearable.Wearable;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "ioPsfwvAp9dJrqyf8jOKH47d9";
+    private static final String TWITTER_SECRET = "HP4CltWNCQGB9cOz9jaoNgXrM58FDE2wUHkVhuuUCly8LfFBb2";
+
 
     Button findRepsButton;
     EditText editText;
@@ -26,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
 
         setContentView(R.layout.activity_main);
 
@@ -37,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements
                 .build();
 
         editText = (EditText)findViewById(R.id.editText);
-        editText2 = (EditText)findViewById(R.id.editText2);
 
 
 

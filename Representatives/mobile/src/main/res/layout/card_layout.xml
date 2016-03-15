@@ -73,30 +73,15 @@
         android:layout_marginTop="0dp"
         android:layout_marginLeft="20dp"/>
 
+        <com.twitter.sdk.android.tweetui.TweetView
+            android:layout_width="wrap_content"
+            android:id="@+id/tweetView"
+            android:layout_height="wrap_content"
+            >
 
-        <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/twittericon"
-        android:layout_toRightOf="@id/repProfilePic"
-        android:scaleType="fitCenter"
-        android:layout_below="@id/repWebsite"
-        android:id="@+id/twitterIconOne"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"/>
+        </com.twitter.sdk.android.tweetui.TweetView>
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="I'm a representative! Yay me. #ImAwesome "
-        android:id="@+id/tweet"
-        android:textSize="15sp"
-        android:textColor="#3399ff"
-        android:layout_below="@id/repWebsite"
-        android:layout_toRightOf="@id/twitterIconOne"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"/>
+
 
     </RelativeLayout>
 
